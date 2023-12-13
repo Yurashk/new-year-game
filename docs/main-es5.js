@@ -40,7 +40,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-    __webpack_exports__["default"] = "<div class=\"container\">\n  <img src=\"../assets/images/spy.jpg\">\n    <router-outlet class=\"\"></router-outlet>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"container\">\n  <img src=\"assets/images/spy.jpg\">\n    <router-outlet class=\"\"></router-outlet>\n</div>\n";
 
     /***/
   }),

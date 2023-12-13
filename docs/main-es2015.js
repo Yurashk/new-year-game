@@ -32,7 +32,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\n  <img src=\"../assets/images/spy.jpg\">\n    <router-outlet class=\"\"></router-outlet>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\n  <img src=\"assets/images/spy.jpg\">\n    <router-outlet class=\"\"></router-outlet>\n</div>\n");
 
 /***/ }),
 
