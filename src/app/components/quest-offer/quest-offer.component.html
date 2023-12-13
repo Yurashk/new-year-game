@@ -1,0 +1,18 @@
+<div class="container-for-offer">
+  <h2>Умови</h2>
+  <div class="font-italic">
+    <ul>
+      <li>Умова 1</li>
+      <li>Умова 2</li>
+      <li>Умова 3</li>
+    </ul>
+
+  </div>
+  <div class="form-check d-flex align-items-center justify-content-start mt-2">
+    <input class="form-check-input mt-0 mr-2" [(ngModel)]="isChecked"  type="checkbox" value="" id="flexCheckChecked" checked>
+    <span class="ml-3">
+      Я погоджуюсь з умовами
+    </span>
+  </div>
+  <button type="submit" (click)="goToFirstTask()" [disabled]="!isChecked" class="btn btn-sm mt-3 btn-primary">Підтвердити</button>
+</div>

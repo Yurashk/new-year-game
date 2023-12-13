@@ -1,0 +1,14 @@
+.font-italic{
+  font-size: 10px;
+}
+.container-for-offer{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+span{
+  margin-left: 10px;
+}
