@@ -45,7 +45,20 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"task-container\">\n  <h3>Агенте {{currentAgent}} Тобі необхідно знайти свого напарника</h3>\n  <ul>\n    <li *ngFor=\"let i of currentQuestions\">\n      {{i.question}}\n    </li>\n  </ul>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"task-container text-center\">\n  <h3>Агенте {{currentAgent}} Тобі необхідно знайти свого напарника</h3>\n  <span >{{currentQuestions.question}}</span>\n  <span class=\"small text-danger\">{{currentQuestions.title}}</span>\n  <form [formGroup]=\"myForm\" (ngSubmit)=\"submitForm()\" class=\"d-flex flex-column justify-content-center \">\n    <div class=\"mb-3 input-array\">\n      <input type=\"number\" (keyup)=\"checkCorrect($event)\"  class=\"form-control\" min=\"0\" max=\"9\" content=\"width=device-width, initial-scale=1, maximum-scale=1\" formControlName=\"agentNumber\"  id=\"exampleInputNumber\">\n      <input type=\"number\" (keyup)=\"checkCorrect($event)\" class=\"form-control mx-2\" maxlength=\"1\" max=\"9\" content=\"width=device-width, initial-scale=1, maximum-scale=1\" formControlName=\"agentNumber2\"  id=\"exampleInputNumber2\">\n      <input type=\"number\" (keyup)=\"checkCorrect($event)\" class=\"form-control\" maxlength=\"1\" max=\"9\" content=\"width=device-width, initial-scale=1, maximum-scale=1\" formControlName=\"agentNumber3\"  id=\"exampleInputNumber3\">\n    </div>\n    <button type=\"submit\" [disabled]=\"!myForm.valid\" class=\"btn btn-primary\">Підтвердити</button>\n    <span *ngIf=\"myForm.valid && correct\" class=\"mt-3 text-danger text-center\">Такого агента не існує!</span>\n  </form>\n\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/fours-question/fours-question.component.html":
+/*!***************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/fours-question/fours-question.component.html ***!
+  \***************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"task-container text-center\">\n  <div class=\"task-container text-center\">\n    <div class=\"question-div\" [ngClass]=\"currentAgent.memberSide==1 ? 'for-first':'for-second'\">{{currentQuestions.question}}</div>\n    <span class=\"small text-danger\">{{currentQuestions.title}}</span>\n    <form [formGroup]=\"myForm\" (ngSubmit)=\"submitForm()\" class=\"d-flex flex-column justify-content-center \">\n      <div class=\"mb-3 input-array\">\n        <input type=\"number\" class=\"form-control\" min=\"0\" max=\"9\" content=\"width=device-width, initial-scale=1, maximum-scale=1\" formControlName=\"agentAnswer\"  id=\"exampleInputNumber\">\n      </div>\n      <button type=\"submit\" [disabled]=\"!myForm.valid\" class=\"btn btn-primary\">Підтвердити</button>\n      <span *ngIf=\"myForm.valid && correct\" class=\"mt-3 text-danger text-center\">Відповідь хибна ,ти можеш краще!</span>\n    </form>\n\n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -71,7 +84,33 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<form [formGroup]=\"myForm\" (ngSubmit)=\"submitForm()\" class=\"d-flex flex-column justify-content-center \">\n  <h2 class=\" font-weight-bold w-100 text-center mb-3\">Ваш шифр,Агенте!</h2>\n  <div class=\"mb-3 input-array\">\n    <input type=\"number\" (keyup)=\"checkCorrect($event)\"  class=\"form-control\" min=\"0\" max=\"9\" formControlName=\"agentNumber\"  id=\"exampleInputNumber\">\n    <input type=\"number\" (keyup)=\"checkCorrect($event)\" class=\"form-control mx-2\" maxlength=\"1\" max=\"9\" formControlName=\"agentNumber2\"  id=\"exampleInputNumber2\">\n    <input type=\"number\" (keyup)=\"checkCorrect($event)\" class=\"form-control\" maxlength=\"1\" max=\"9\" formControlName=\"agentNumber3\"  id=\"exampleInputNumber3\">\n  </div>\n  <button type=\"submit\" [disabled]=\"!myForm.valid\" class=\"btn btn-primary\">Підтвердити</button>\n  <span *ngIf=\"myForm.valid && correct\" class=\"mt-3 text-danger text-center\">Такого агента не існує!</span>\n</form>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<form [formGroup]=\"myForm\" (ngSubmit)=\"submitForm()\" class=\"d-flex flex-column justify-content-center \">\n  <h2 class=\" font-weight-bold w-100 text-center mb-3\">Ваш шифр,Агенте!</h2>\n  <div class=\"mb-3 input-array\">\n    <input type=\"number\" (keyup)=\"checkCorrect($event)\"  class=\"form-control\" min=\"0\" max=\"9\" content=\"width=device-width, initial-scale=1, maximum-scale=1\" formControlName=\"agentNumber\"  id=\"exampleInputNumber\">\n    <input type=\"number\" (keyup)=\"checkCorrect($event)\" class=\"form-control mx-2\" maxlength=\"1\" max=\"9\" content=\"width=device-width, initial-scale=1, maximum-scale=1\" formControlName=\"agentNumber2\"  id=\"exampleInputNumber2\">\n    <input type=\"number\" (keyup)=\"checkCorrect($event)\" class=\"form-control\" maxlength=\"1\" max=\"9\" content=\"width=device-width, initial-scale=1, maximum-scale=1\" formControlName=\"agentNumber3\"  id=\"exampleInputNumber3\">\n  </div>\n  <button type=\"submit\" [disabled]=\"!myForm.valid\" class=\"btn btn-primary\">Підтвердити</button>\n  <span *ngIf=\"myForm.valid && correct\" class=\"mt-3 text-danger text-center\">Такого агента не існує!</span>\n</form>\n\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/second-task/second-task.component.html":
+/*!*********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/second-task/second-task.component.html ***!
+  \*********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"task-container text-center\">\n  <div class=\"task-container text-center\">\n    <div class=\"question-div\" [ngClass]=\"currentAgent.memberSide==1 ? 'for-first':'for-second'\">{{currentQuestions.question}}</div>\n    <span class=\"small text-danger\">{{currentQuestions.title}}</span>\n    <form [formGroup]=\"myForm\" (ngSubmit)=\"submitForm()\" class=\"d-flex flex-column justify-content-center \">\n      <div class=\"mb-3 input-array\">\n        <input type=\"number\" class=\"form-control\" min=\"0\" max=\"9\" content=\"width=device-width, initial-scale=1, maximum-scale=1\" formControlName=\"agentAnswer\"  id=\"exampleInputNumber\">\n      </div>\n      <button type=\"submit\" [disabled]=\"!myForm.valid\" class=\"btn btn-primary\">Підтвердити</button>\n      <span *ngIf=\"myForm.valid && correct\" class=\"mt-3 text-danger text-center\">Такого агента не існує!</span>\n    </form>\n\n  </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/thrd-question/thrd-question.component.html":
+/*!*************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/thrd-question/thrd-question.component.html ***!
+  \*************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"task-container text-center\">\n  <div class=\"task-container text-center\">\n    <div class=\"question-div\" [ngClass]=\"currentAgent.memberSide==1 ? 'for-first':'for-second'\">{{currentQuestions.question}}</div>\n    <span class=\"small text-danger\">{{currentQuestions.title}}</span>\n    <form [formGroup]=\"myForm\" (ngSubmit)=\"submitForm()\" class=\"d-flex flex-column justify-content-center \">\n      <div class=\"mb-3 input-array\">\n        <input type=\"number\" class=\"form-control\" min=\"0\" max=\"9\" content=\"width=device-width, initial-scale=1, maximum-scale=1\" formControlName=\"agentAnswer\"  id=\"exampleInputNumber\">\n      </div>\n      <button type=\"submit\" [disabled]=\"!myForm.valid\" class=\"btn btn-primary\">Підтвердити</button>\n      <span *ngIf=\"myForm.valid && correct\" class=\"mt-3 text-danger text-center\">Відповідь хибна ,ти можеш краще!</span>\n    </form>\n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -345,6 +384,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_registration_registration_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/registration/registration.component */ "./src/app/components/registration/registration.component.ts");
 /* harmony import */ var _components_quest_offer_quest_offer_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/quest-offer/quest-offer.component */ "./src/app/components/quest-offer/quest-offer.component.ts");
 /* harmony import */ var _components_first_task_first_task_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/first-task/first-task.component */ "./src/app/components/first-task/first-task.component.ts");
+/* harmony import */ var _components_second_task_second_task_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/second-task/second-task.component */ "./src/app/components/second-task/second-task.component.ts");
+/* harmony import */ var _components_thrd_question_thrd_question_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/thrd-question/thrd-question.component */ "./src/app/components/thrd-question/thrd-question.component.ts");
+/* harmony import */ var _components_fours_question_fours_question_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/fours-question/fours-question.component */ "./src/app/components/fours-question/fours-question.component.ts");
+
+
+
 
 
 
@@ -353,9 +398,12 @@ __webpack_require__.r(__webpack_exports__);
 
 const routes = [
     { path: 'registration', component: _components_registration_registration_component__WEBPACK_IMPORTED_MODULE_3__["RegistrationComponent"] },
-    { path: '', redirectTo: '/registration', pathMatch: 'full' },
+    { path: '', component: _components_registration_registration_component__WEBPACK_IMPORTED_MODULE_3__["RegistrationComponent"] },
     { path: 'rules', component: _components_quest_offer_quest_offer_component__WEBPACK_IMPORTED_MODULE_4__["QuestOfferComponent"] },
     { path: 'first-task', component: _components_first_task_first_task_component__WEBPACK_IMPORTED_MODULE_5__["FirstTaskComponent"] },
+    { path: 'second-task', component: _components_second_task_second_task_component__WEBPACK_IMPORTED_MODULE_6__["SecondTaskComponent"] },
+    { path: 'third-task', component: _components_thrd_question_thrd_question_component__WEBPACK_IMPORTED_MODULE_7__["ThrdQuestionComponent"] },
+    { path: 'fours-task', component: _components_fours_question_fours_question_component__WEBPACK_IMPORTED_MODULE_8__["FoursQuestionComponent"] },
     { path: '**', component: _components_registration_registration_component__WEBPACK_IMPORTED_MODULE_3__["RegistrationComponent"] }
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -380,7 +428,7 @@ AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".container{\r\n  height: 100vh;\r\n  width: 100%;\r\n  position: relative;\r\n  background-color: #fef7f1 ;\r\n}\r\n\r\nimg{\r\n  position: absolute;\r\n  top:15px;\r\n  left: 15px;\r\n  width: 100px;\r\n  height: 100px;\r\n  border-radius: 50%;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxhQUFhO0VBQ2IsV0FBVztFQUNYLGtCQUFrQjtFQUNsQiwwQkFBMEI7QUFDNUI7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsUUFBUTtFQUNSLFVBQVU7RUFDVixZQUFZO0VBQ1osYUFBYTtFQUNiLGtCQUFrQjtBQUNwQiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbnRhaW5lcntcclxuICBoZWlnaHQ6IDEwMHZoO1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmVmN2YxIDtcclxufVxyXG5cclxuaW1ne1xyXG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICB0b3A6MTVweDtcclxuICBsZWZ0OiAxNXB4O1xyXG4gIHdpZHRoOiAxMDBweDtcclxuICBoZWlnaHQ6IDEwMHB4O1xyXG4gIGJvcmRlci1yYWRpdXM6IDUwJTtcclxufVxyXG4iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".container{\r\n  height: 100vh;\r\n  max-height: 100vh;\r\n  width: 100%;\r\n  max-width: 100%;\r\n  overflow-x: hidden;\r\n  position: relative;\r\n  background-color: #fef7f1 ;\r\n}\r\n\r\nimg{\r\n  position: absolute;\r\n  top:15px;\r\n  left: 15px;\r\n  width: 100px;\r\n  height: 100px;\r\n  border-radius: 50%;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxhQUFhO0VBQ2IsaUJBQWlCO0VBQ2pCLFdBQVc7RUFDWCxlQUFlO0VBQ2Ysa0JBQWtCO0VBQ2xCLGtCQUFrQjtFQUNsQiwwQkFBMEI7QUFDNUI7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsUUFBUTtFQUNSLFVBQVU7RUFDVixZQUFZO0VBQ1osYUFBYTtFQUNiLGtCQUFrQjtBQUNwQiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbnRhaW5lcntcclxuICBoZWlnaHQ6IDEwMHZoO1xyXG4gIG1heC1oZWlnaHQ6IDEwMHZoO1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIG1heC13aWR0aDogMTAwJTtcclxuICBvdmVyZmxvdy14OiBoaWRkZW47XHJcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICNmZWY3ZjEgO1xyXG59XHJcblxyXG5pbWd7XHJcbiAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gIHRvcDoxNXB4O1xyXG4gIGxlZnQ6IDE1cHg7XHJcbiAgd2lkdGg6IDEwMHB4O1xyXG4gIGhlaWdodDogMTAwcHg7XHJcbiAgYm9yZGVyLXJhZGl1czogNTAlO1xyXG59XHJcbiJdfQ== */");
 
 /***/ }),
 
@@ -434,6 +482,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_quest_offer_quest_offer_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/quest-offer/quest-offer.component */ "./src/app/components/quest-offer/quest-offer.component.ts");
 /* harmony import */ var _components_registration_registration_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/registration/registration.component */ "./src/app/components/registration/registration.component.ts");
 /* harmony import */ var _components_first_task_first_task_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/first-task/first-task.component */ "./src/app/components/first-task/first-task.component.ts");
+/* harmony import */ var _components_second_task_second_task_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/second-task/second-task.component */ "./src/app/components/second-task/second-task.component.ts");
+/* harmony import */ var _components_thrd_question_thrd_question_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/thrd-question/thrd-question.component */ "./src/app/components/thrd-question/thrd-question.component.ts");
+/* harmony import */ var _components_fours_question_fours_question_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/fours-question/fours-question.component */ "./src/app/components/fours-question/fours-question.component.ts");
+
+
+
 
 
 
@@ -451,7 +505,10 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
             _components_quest_offer_quest_offer_component__WEBPACK_IMPORTED_MODULE_6__["QuestOfferComponent"],
             _components_registration_registration_component__WEBPACK_IMPORTED_MODULE_7__["RegistrationComponent"],
-            _components_first_task_first_task_component__WEBPACK_IMPORTED_MODULE_8__["FirstTaskComponent"]
+            _components_first_task_first_task_component__WEBPACK_IMPORTED_MODULE_8__["FirstTaskComponent"],
+            _components_second_task_second_task_component__WEBPACK_IMPORTED_MODULE_9__["SecondTaskComponent"],
+            _components_thrd_question_thrd_question_component__WEBPACK_IMPORTED_MODULE_10__["ThrdQuestionComponent"],
+            _components_fours_question_fours_question_component__WEBPACK_IMPORTED_MODULE_11__["FoursQuestionComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -477,7 +534,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".task-container{\r\n  width: 100%;\r\n  height: 100%;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n}\r\nh3{\r\n  font-size: 14px;\r\n  font-weight: bold;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9maXJzdC10YXNrL2ZpcnN0LXRhc2suY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFdBQVc7RUFDWCxZQUFZO0VBQ1osYUFBYTtFQUNiLHNCQUFzQjtFQUN0Qix1QkFBdUI7QUFDekI7QUFDQTtFQUNFLGVBQWU7RUFDZixpQkFBaUI7QUFDbkIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2ZpcnN0LXRhc2svZmlyc3QtdGFzay5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnRhc2stY29udGFpbmVye1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGhlaWdodDogMTAwJTtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbn1cclxuaDN7XHJcbiAgZm9udC1zaXplOiAxNHB4O1xyXG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG59XHJcbiJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (".task-container{\r\n  width: 100%;\r\n  height: 100%;\r\n  display: flex;\r\n\r\n  flex-direction: column;\r\n  justify-content: center;\r\n}\r\n.small{\r\n  margin-top:10px;\r\n  margin-bottom: 10px;\r\n  font-size: 10px;\r\n}\r\nh3{\r\n  font-size: 14px;\r\n  font-weight: bold;\r\n}\r\ninput{\r\n  width: 35px;\r\n}\r\n.input-array{\r\n  width: 100%;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9maXJzdC10YXNrL2ZpcnN0LXRhc2suY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFdBQVc7RUFDWCxZQUFZO0VBQ1osYUFBYTs7RUFFYixzQkFBc0I7RUFDdEIsdUJBQXVCO0FBQ3pCO0FBQ0E7RUFDRSxlQUFlO0VBQ2YsbUJBQW1CO0VBQ25CLGVBQWU7QUFDakI7QUFDQTtFQUNFLGVBQWU7RUFDZixpQkFBaUI7QUFDbkI7QUFFQTtFQUNFLFdBQVc7QUFDYjtBQUNBO0VBQ0UsV0FBVztFQUNYLGFBQWE7RUFDYix1QkFBdUI7RUFDdkIsbUJBQW1CO0FBQ3JCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9maXJzdC10YXNrL2ZpcnN0LXRhc2suY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi50YXNrLWNvbnRhaW5lcntcclxuICB3aWR0aDogMTAwJTtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbiAgZGlzcGxheTogZmxleDtcclxuXHJcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxufVxyXG4uc21hbGx7XHJcbiAgbWFyZ2luLXRvcDoxMHB4O1xyXG4gIG1hcmdpbi1ib3R0b206IDEwcHg7XHJcbiAgZm9udC1zaXplOiAxMHB4O1xyXG59XHJcbmgze1xyXG4gIGZvbnQtc2l6ZTogMTRweDtcclxuICBmb250LXdlaWdodDogYm9sZDtcclxufVxyXG5cclxuaW5wdXR7XHJcbiAgd2lkdGg6IDM1cHg7XHJcbn1cclxuLmlucHV0LWFycmF5e1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxufVxyXG4iXX0= */");
 
 /***/ }),
 
@@ -494,23 +551,54 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _services_questions_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/questions.service */ "./src/app/services/questions.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
+
 
 
 
 let FirstTaskComponent = class FirstTaskComponent {
-    constructor(questionsService) {
+    constructor(formBuilder, questionsService, router) {
+        this.formBuilder = formBuilder;
         this.questionsService = questionsService;
+        this.router = router;
         this.currentAgent = null;
-        this.currentQuestions = [];
+        this.correct = false;
+        this.myForm = this.formBuilder.group({
+            agentNumber: [null, [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].max(9)]],
+            agentNumber2: [null, [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].maxLength(1)]],
+            agentNumber3: [null, [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].maxLength(1)]],
+        });
     }
     ngOnInit() {
         this.currentAgent = Number(localStorage.getItem('currentAgent'));
         this.currentQuestions = this.questionsService.getQuestions(1, this.currentAgent);
-        console.log(this.currentQuestions);
+    }
+    checkCorrect(event) {
+        let next = event.target.nextElementSibling;
+        if (next && event.target.value) {
+            next.focus();
+        }
+        else {
+            event.target.blur();
+        }
+        this.correct = false;
+    }
+    submitForm() {
+        let currentAgent = this.myForm.value.agentNumber * 100 + this.myForm.value.agentNumber2 * 10 + this.myForm.value.agentNumber3;
+        if (this.currentQuestions.answer === currentAgent) {
+            localStorage.setItem('currentAgent', String(currentAgent));
+            this.router.navigate(['second-task']);
+        }
+        else
+            this.correct = true;
     }
 };
 FirstTaskComponent.ctorParameters = () => [
-    { type: _services_questions_service__WEBPACK_IMPORTED_MODULE_2__["QuestionsService"] }
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"] },
+    { type: _services_questions_service__WEBPACK_IMPORTED_MODULE_2__["QuestionsService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }
 ];
 FirstTaskComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -519,6 +607,79 @@ FirstTaskComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./first-task.component.css */ "./src/app/components/first-task/first-task.component.css")).default]
     })
 ], FirstTaskComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/fours-question/fours-question.component.css":
+/*!************************************************************************!*\
+  !*** ./src/app/components/fours-question/fours-question.component.css ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".task-container{\r\n  width: 100%;\r\n  height: 100vh;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n}\r\n.question-div{\r\n  position: absolute;\r\n  width: 300px;\r\n  padding: 5px;\r\n  bottom:20px;\r\n  border:1px solid silver;\r\n  border-radius: 15px;\r\n  background-color: lightcoral;\r\n  opacity: .8;\r\n}\r\n.for-first{\r\n  right:-150px\r\n}\r\n.for-second{\r\n  left:-150px\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9mb3Vycy1xdWVzdGlvbi9mb3Vycy1xdWVzdGlvbi5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsV0FBVztFQUNYLGFBQWE7RUFDYixhQUFhO0VBQ2Isc0JBQXNCO0VBQ3RCLHVCQUF1QjtBQUN6QjtBQUNBO0VBQ0Usa0JBQWtCO0VBQ2xCLFlBQVk7RUFDWixZQUFZO0VBQ1osV0FBVztFQUNYLHVCQUF1QjtFQUN2QixtQkFBbUI7RUFDbkIsNEJBQTRCO0VBQzVCLFdBQVc7QUFDYjtBQUNBO0VBQ0U7QUFDRjtBQUNBO0VBQ0U7QUFDRiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvZm91cnMtcXVlc3Rpb24vZm91cnMtcXVlc3Rpb24uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi50YXNrLWNvbnRhaW5lcntcclxuICB3aWR0aDogMTAwJTtcclxuICBoZWlnaHQ6IDEwMHZoO1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxufVxyXG4ucXVlc3Rpb24tZGl2e1xyXG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICB3aWR0aDogMzAwcHg7XHJcbiAgcGFkZGluZzogNXB4O1xyXG4gIGJvdHRvbToyMHB4O1xyXG4gIGJvcmRlcjoxcHggc29saWQgc2lsdmVyO1xyXG4gIGJvcmRlci1yYWRpdXM6IDE1cHg7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogbGlnaHRjb3JhbDtcclxuICBvcGFjaXR5OiAuODtcclxufVxyXG4uZm9yLWZpcnN0e1xyXG4gIHJpZ2h0Oi0xNTBweFxyXG59XHJcbi5mb3Itc2Vjb25ke1xyXG4gIGxlZnQ6LTE1MHB4XHJcbn1cclxuIl19 */");
+
+/***/ }),
+
+/***/ "./src/app/components/fours-question/fours-question.component.ts":
+/*!***********************************************************************!*\
+  !*** ./src/app/components/fours-question/fours-question.component.ts ***!
+  \***********************************************************************/
+/*! exports provided: FoursQuestionComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FoursQuestionComponent", function() { return FoursQuestionComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _services_questions_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/questions.service */ "./src/app/services/questions.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
+
+
+
+
+let FoursQuestionComponent = class FoursQuestionComponent {
+    constructor(formBuilder, questionsService, router) {
+        this.formBuilder = formBuilder;
+        this.questionsService = questionsService;
+        this.router = router;
+        this.correct = false;
+        this.myForm = this.formBuilder.group({
+            agentAnswer: [null, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+        });
+    }
+    ngOnInit() {
+        let a = this.questionsService.getAgentNumbers();
+        this.currentAgent = a.find(x => x.id == Number(localStorage.getItem('currentAgent')));
+        this.currentQuestions = this.questionsService.getQuestions(4, this.currentAgent.id);
+    }
+    submitForm() {
+        if (this.currentQuestions.answer === this.myForm.value.agentAnswer) {
+            this.router.navigate(['first-task']);
+        }
+        else
+            this.correct = true;
+    }
+};
+FoursQuestionComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
+    { type: _services_questions_service__WEBPACK_IMPORTED_MODULE_3__["QuestionsService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }
+];
+FoursQuestionComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-fours-question',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./fours-question.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/fours-question/fours-question.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./fours-question.component.css */ "./src/app/components/fours-question/fours-question.component.css")).default]
+    })
+], FoursQuestionComponent);
 
 
 
@@ -618,7 +779,6 @@ let RegistrationComponent = class RegistrationComponent {
         this.questionsService = questionsService;
         this.router = router;
         this.correct = false;
-        this.currentCode = '';
         this.myForm = this.formBuilder.group({
             agentNumber: [null, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].max(9)]],
             agentNumber2: [null, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].maxLength(1)]],
@@ -627,7 +787,14 @@ let RegistrationComponent = class RegistrationComponent {
     }
     ngOnInit() {
     }
-    checkCorrect(value) {
+    checkCorrect(event) {
+        let next = event.target.nextElementSibling;
+        if (next && event.target.value) {
+            next.focus();
+        }
+        else {
+            event.target.blur();
+        }
         this.correct = false;
     }
     submitForm() {
@@ -659,6 +826,153 @@ RegistrationComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/components/second-task/second-task.component.css":
+/*!******************************************************************!*\
+  !*** ./src/app/components/second-task/second-task.component.css ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".task-container{\r\n  width: 100%;\r\n  height: 100%;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n}\r\n.question-div{\r\n  position: absolute;\r\n  width: 300px;\r\n  padding: 5px;\r\n  bottom:20px;\r\n  border:1px solid silver;\r\n  border-radius: 15px;\r\n  background-color: lightcoral;\r\n  opacity: .8;\r\n}\r\n.for-first{\r\n  right:-150px\r\n}\r\n.for-second{\r\n  left:-150px\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9zZWNvbmQtdGFzay9zZWNvbmQtdGFzay5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsV0FBVztFQUNYLFlBQVk7RUFDWixhQUFhO0VBQ2Isc0JBQXNCO0VBQ3RCLHVCQUF1QjtBQUN6QjtBQUNBO0VBQ0Usa0JBQWtCO0VBQ2xCLFlBQVk7RUFDWixZQUFZO0VBQ1osV0FBVztFQUNYLHVCQUF1QjtFQUN2QixtQkFBbUI7RUFDbkIsNEJBQTRCO0VBQzVCLFdBQVc7QUFDYjtBQUNBO0VBQ0U7QUFDRjtBQUNBO0VBQ0U7QUFDRiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvc2Vjb25kLXRhc2svc2Vjb25kLXRhc2suY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi50YXNrLWNvbnRhaW5lcntcclxuICB3aWR0aDogMTAwJTtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG59XHJcbi5xdWVzdGlvbi1kaXZ7XHJcbiAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gIHdpZHRoOiAzMDBweDtcclxuICBwYWRkaW5nOiA1cHg7XHJcbiAgYm90dG9tOjIwcHg7XHJcbiAgYm9yZGVyOjFweCBzb2xpZCBzaWx2ZXI7XHJcbiAgYm9yZGVyLXJhZGl1czogMTVweDtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiBsaWdodGNvcmFsO1xyXG4gIG9wYWNpdHk6IC44O1xyXG59XHJcbi5mb3ItZmlyc3R7XHJcbiAgcmlnaHQ6LTE1MHB4XHJcbn1cclxuLmZvci1zZWNvbmR7XHJcbiAgbGVmdDotMTUwcHhcclxufVxyXG4iXX0= */");
+
+/***/ }),
+
+/***/ "./src/app/components/second-task/second-task.component.ts":
+/*!*****************************************************************!*\
+  !*** ./src/app/components/second-task/second-task.component.ts ***!
+  \*****************************************************************/
+/*! exports provided: SecondTaskComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SecondTaskComponent", function() { return SecondTaskComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _services_questions_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/questions.service */ "./src/app/services/questions.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
+
+
+
+
+let SecondTaskComponent = class SecondTaskComponent {
+    constructor(formBuilder, questionsService, router) {
+        this.formBuilder = formBuilder;
+        this.questionsService = questionsService;
+        this.router = router;
+        this.correct = false;
+        this.myForm = this.formBuilder.group({
+            agentAnswer: [null, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+        });
+    }
+    ngOnInit() {
+        let a = this.questionsService.getAgentNumbers();
+        this.currentAgent = a.find(x => x.id == Number(localStorage.getItem('currentAgent')));
+        this.currentQuestions = this.questionsService.getQuestions(2, this.currentAgent.id);
+    }
+    submitForm() {
+        console.log(this.myForm.value.agentAnswer);
+        if (this.currentQuestions.answer === this.myForm.value.agentAnswer) {
+            this.router.navigate(['third-task']);
+        }
+        else
+            this.correct = true;
+    }
+};
+SecondTaskComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
+    { type: _services_questions_service__WEBPACK_IMPORTED_MODULE_3__["QuestionsService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }
+];
+SecondTaskComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-second-task',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./second-task.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/second-task/second-task.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./second-task.component.css */ "./src/app/components/second-task/second-task.component.css")).default]
+    })
+], SecondTaskComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/thrd-question/thrd-question.component.css":
+/*!**********************************************************************!*\
+  !*** ./src/app/components/thrd-question/thrd-question.component.css ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".task-container{\r\n  width: 100%;\r\n  height: 100%;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n}\r\n.question-div{\r\n  position: absolute;\r\n  width: 300px;\r\n  padding: 5px;\r\n  bottom:20px;\r\n  border:1px solid silver;\r\n  border-radius: 15px;\r\n  background-color: lightcoral;\r\n  opacity: .8;\r\n}\r\n.for-first{\r\n  right:-150px\r\n}\r\n.for-second{\r\n  left:-150px\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy90aHJkLXF1ZXN0aW9uL3RocmQtcXVlc3Rpb24uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFdBQVc7RUFDWCxZQUFZO0VBQ1osYUFBYTtFQUNiLHNCQUFzQjtFQUN0Qix1QkFBdUI7QUFDekI7QUFDQTtFQUNFLGtCQUFrQjtFQUNsQixZQUFZO0VBQ1osWUFBWTtFQUNaLFdBQVc7RUFDWCx1QkFBdUI7RUFDdkIsbUJBQW1CO0VBQ25CLDRCQUE0QjtFQUM1QixXQUFXO0FBQ2I7QUFDQTtFQUNFO0FBQ0Y7QUFDQTtFQUNFO0FBQ0YiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL3RocmQtcXVlc3Rpb24vdGhyZC1xdWVzdGlvbi5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnRhc2stY29udGFpbmVye1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGhlaWdodDogMTAwJTtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbn1cclxuLnF1ZXN0aW9uLWRpdntcclxuICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgd2lkdGg6IDMwMHB4O1xyXG4gIHBhZGRpbmc6IDVweDtcclxuICBib3R0b206MjBweDtcclxuICBib3JkZXI6MXB4IHNvbGlkIHNpbHZlcjtcclxuICBib3JkZXItcmFkaXVzOiAxNXB4O1xyXG4gIGJhY2tncm91bmQtY29sb3I6IGxpZ2h0Y29yYWw7XHJcbiAgb3BhY2l0eTogLjg7XHJcbn1cclxuLmZvci1maXJzdHtcclxuICByaWdodDotMTUwcHhcclxufVxyXG4uZm9yLXNlY29uZHtcclxuICBsZWZ0Oi0xNTBweFxyXG59XHJcbiJdfQ== */");
+
+/***/ }),
+
+/***/ "./src/app/components/thrd-question/thrd-question.component.ts":
+/*!*********************************************************************!*\
+  !*** ./src/app/components/thrd-question/thrd-question.component.ts ***!
+  \*********************************************************************/
+/*! exports provided: ThrdQuestionComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ThrdQuestionComponent", function() { return ThrdQuestionComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _services_questions_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/questions.service */ "./src/app/services/questions.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
+
+
+
+
+let ThrdQuestionComponent = class ThrdQuestionComponent {
+    constructor(formBuilder, questionsService, router) {
+        this.formBuilder = formBuilder;
+        this.questionsService = questionsService;
+        this.router = router;
+        this.correct = false;
+        this.myForm = this.formBuilder.group({
+            agentAnswer: [null, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+        });
+    }
+    ngOnInit() {
+        let a = this.questionsService.getAgentNumbers();
+        this.currentAgent = a.find(x => x.id == Number(localStorage.getItem('currentAgent')));
+        this.currentQuestions = this.questionsService.getQuestions(3, this.currentAgent.id);
+    }
+    submitForm() {
+        if (this.currentQuestions.answer === this.myForm.value.agentAnswer) {
+            this.router.navigate(['fours-task']);
+        }
+        else
+            this.correct = true;
+    }
+};
+ThrdQuestionComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
+    { type: _services_questions_service__WEBPACK_IMPORTED_MODULE_3__["QuestionsService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }
+];
+ThrdQuestionComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-thrd-question',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./thrd-question.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/thrd-question/thrd-question.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./thrd-question.component.css */ "./src/app/components/thrd-question/thrd-question.component.css")).default]
+    })
+], ThrdQuestionComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/services/questions.service.ts":
 /*!***********************************************!*\
   !*** ./src/app/services/questions.service.ts ***!
@@ -684,25 +998,76 @@ let QuestionsService = class QuestionsService {
             { id: 228, team: 3, memberSide: 2 }
         ];
         this.agentsQuestions = [
-            { id: 1, memberId: 777, questionNumber: 1, question: '1 питання для 777', title: 'asdasd', answer: 25 },
-            { id: 2, memberId: 690, questionNumber: 1, question: '1 питання для 690', title: 'asdasd', answer: 25 },
-            { id: 3, memberId: 111, questionNumber: 1, question: '1 питання для 111', title: 'asdasd', answer: 25 },
-            { id: 4, memberId: 303, questionNumber: 1, question: '1 питання для 303', title: 'asdasd', answer: 25 },
-            { id: 5, memberId: 906, questionNumber: 1, question: '1 питання для 906', title: 'asdasd', answer: 25 },
-            { id: 6, memberId: 228, questionNumber: 1, question: '1 питання для 228', title: 'asdasd', answer: 25 },
-            { id: 7, memberId: 777, questionNumber: 2, question: '2 питання для 777', title: 'asdasd', answer: 25 },
-            { id: 8, memberId: 690, questionNumber: 2, question: '2 питання для 690', title: 'asdasd', answer: 25 },
-            { id: 9, memberId: 111, questionNumber: 2, question: '2 питання для 111', title: 'asdasd', answer: 25 },
-            { id: 10, memberId: 303, questionNumber: 2, question: '2 питання для 303', title: 'asdasd', answer: 25 },
-            { id: 11, memberId: 906, questionNumber: 2, question: '2 питання для 906', title: 'asdasd', answer: 25 },
-            { id: 12, memberId: 228, questionNumber: 2, question: '2 питання для 228', title: 'asdasd', answer: 25 },
+            { id: 1, memberId: 777, questionNumber: 1, question: 'Знайди свого напарника.Перевір чи немає когось за вхідними дверима!',
+                title: 'Аби продовжити введи номер цього солоденького', answer: 690 },
+            { id: 2, memberId: 690, questionNumber: 1, question: 'Знайди свого напарника.Перевір чи немає когось за вхідними дверима!',
+                title: 'Тільки не кажи одному з агентів,що ви в одній команді)', answer: 777 },
+            { id: 3, memberId: 111, questionNumber: 1, question: 'Знайди свого напарника\n' +
+                    'Твій напарник чекатиме тебе в туалеті', title: 'Чинннааааааа) треба номер напарника:', answer: 303 },
+            { id: 4, memberId: 303, questionNumber: 1, question: 'Знайди свого напарника\n' +
+                    'Твій напарник чекатиме тебе в туалеті', title: 'Сподіваюсь він білий... введи його номер:', answer: 111 },
+            { id: 5, memberId: 906, questionNumber: 1, question: 'Знайди свого напарника\n' +
+                    'Здається, щось підгоріло в духовці', title: 'Контролюй ,аби він не перебрав,будь-ласка.Потрібен його номер ', answer: 228 },
+            { id: 6, memberId: 228, questionNumber: 1, question: 'Знайди свого напарника\n' +
+                    'Здається, щось підгоріло в духовці', title: 'Давно ми не пили за началь... ой тфу.Номер напарника:', answer: 906 },
+            { id: 7, memberId: 777, questionNumber: 2, question: 'Інформація - найцінніша монета, на жаль, небезпечна.\n' +
+                    'Доводиться використовувати шифрування щоб ворожі спец. служби не перехопили потрібний Вам код.\n' +
+                    'Прямуйте в кімнату між входом та ванною.  В пустому куті лежить все необхідне для роботи.\n' +
+                    '\n' +
+                    'Підказка: 2 перші літери однакові', title: 'Тобі знадобиться азбука', answer: 1125415325 },
+            { id: 8, memberId: 690, questionNumber: 2, question: 'Інформація - найцінніша монета, на жаль, небезпечна.\n' +
+                    'Доводиться використовувати шифрування щоб ворожі спец. служби не перехопили потрібний Вам код.\n' +
+                    'Прямуйте в кімнату між входом та ванною.  В пустому куті лежить все необхідне для роботи.\n' +
+                    '\n' +
+                    'Підказка: 2 перші літери однакові', title: 'Тобі знадобиться азбука', answer: 1125415325 },
+            { id: 9, memberId: 111, questionNumber: 2, question: 'Роботи… ЦРУ створювало їх, щоб було легше контролювати людей. Але хитрі жінки почали  використовувати їх в корисливих цілях.\n' +
+                    'Ваша задача знайти робота, який виглядає як пральна машина, але не пускає воду, а навпаки. Щось він приховує!', title: 'Тобі знадобиться азбука', answer: 72612 },
+            { id: 10, memberId: 303, questionNumber: 2, question: 'Роботи… ЦРУ створювало їх, щоб було легше контролювати людей. Але хитрі жінки почали  використовувати їх в корисливих цілях.\n' +
+                    'Ваша задача знайти робота, який виглядає як пральна машина, але не пускає воду, а навпаки. Щось він приховує!', title: 'Тобі знадобиться азбука', answer: 72612 },
+            { id: 11, memberId: 906, questionNumber: 2, question: 'Чи знали ви, що 16% художників - наші агенти?\n' +
+                    'Вони залишили підказку на своїх творіннях у кімнаті з найбільшим дзеркалом.', title: 'Тобі знадобиться азбука', answer: 5212142 },
+            { id: 12, memberId: 228, questionNumber: 2,
+                question: 'Чи знали ви, що 16% художників - наші агенти?\n' +
+                    'Вони залишили підказку на своїх творіннях у кімнаті з найбільшим дзеркалом.', title: '', answer: 5212142 },
+            { id: 13, memberId: 777, questionNumber: 3, question: 'Зараз ви будете знайомитись з головою німецької розвідки.\n' +
+                    'Вона руда та гарна.\n' +
+                    'Будьте найкращими друзями для неї і вона дасть Вам знайти код.', title: 'Тобі знадобиться азбука', answer: 802051 },
+            { id: 14, memberId: 690, questionNumber: 3, question: 'Зараз ви будете знайомитись з головою німецької розвідки.\n' +
+                    'Вона руда та гарна.\n' +
+                    'Будьте найкращими друзями для неї і вона дасть Вам знайти код.', title: 'Тобі знадобиться азбука', answer: 802051 },
+            { id: 15, memberId: 111, questionNumber: 3, question: 'Хто спалив мацкву?', title: 'Тобі знадобиться азбука', answer: 42127624 },
+            { id: 16, memberId: 303, questionNumber: 3, question: 'Хто спалив мацкву?', title: 'Тобі знадобиться азбука', answer: 42127624 },
+            { id: 17, memberId: 906, questionNumber: 3, question: 'Прямуйте до головних агентів.\n' +
+                    'У них всі інструкції. Код надають також вони.', title: 'Тобі знадобиться азбука', answer: 33447 },
+            { id: 18, memberId: 228, questionNumber: 3,
+                question: 'Прямуйте до головних агентів.\n' +
+                    'У них всі інструкції. Код надають також вони.', title: '', answer: 33447 },
+            { id: 19, memberId: 777, questionNumber: 4, question: 'Прямуйте до головних агентів.\n' +
+                    'У них всі інструкції. Код надають також вони.', title: 'Тобі знадобиться азбука', answer: 33447 },
+            { id: 20, memberId: 690, questionNumber: 4, question: 'Прямуйте до головних агентів.\n' +
+                    'У них всі інструкції. Код надають також вони.', title: 'Тобі знадобиться азбука', answer: 33447 },
+            { id: 21, memberId: 111, questionNumber: 4, question: 'Інформація - найцінніша монета, на жаль, небезпечна.\n' +
+                    'Доводиться використовувати шифрування щоб ворожі спец. служби не перехопили потрібний Вам код.\n' +
+                    'Прямуйте в кімнату між входом та ванною.  В пустому куті лежить все необхідне для роботи.\n' +
+                    '\n' +
+                    'Підказка: 2 перші літери однакові', title: 'Тобі знадобиться азбука', answer: 1125415325 },
+            { id: 22, memberId: 303, questionNumber: 4, question: 'Інформація - найцінніша монета, на жаль, небезпечна.\n' +
+                    'Доводиться використовувати шифрування щоб ворожі спец. служби не перехопили потрібний Вам код.\n' +
+                    'Прямуйте в кімнату між входом та ванною.  В пустому куті лежить все необхідне для роботи.\n' +
+                    '\n' +
+                    'Підказка: 2 перші літери однакові', title: 'Тобі знадобиться азбука', answer: 1125415325 },
+            { id: 23, memberId: 906, questionNumber: 4, question: 'Роботи… ЦРУ створювало їх, щоб було легше контролювати людей. Але хитрі жінки почали  використовувати їх в корисливих цілях.\n' +
+                    'Знайдіть робота, який дасть фору Єноту полоскуну. У нього є те, що Вам потрібно!', title: 'Тобі знадобиться азбука', answer: 72612 },
+            { id: 24, memberId: 228, questionNumber: 4,
+                question: 'Роботи… ЦРУ створювало їх, щоб було легше контролювати людей. Але хитрі жінки почали  використовувати їх в корисливих цілях.\n' +
+                    'Знайдіть робота, який дасть фору Єноту полоскуну. У нього є те, що Вам потрібно!', title: 'Тобі знадобиться азбука', answer: 72612 },
         ];
     }
     getAgentNumbers() {
         return this.agentsNumbers;
     }
     getQuestions(questionNumber, memberId) {
-        return this.agentsQuestions.filter(x => x.memberId == memberId && x.questionNumber == questionNumber);
+        return this.agentsQuestions.find(x => x.memberId == memberId && x.questionNumber == questionNumber);
     }
 };
 QuestionsService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
