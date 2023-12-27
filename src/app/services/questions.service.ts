@@ -15,18 +15,76 @@ export class QuestionsService {
     {id: 228, team: 3,memberSide:2}];
 
   agentsQuestions:Questions[]=[
-    {id:1,memberId:777,questionNumber:1,question:'1 питання для 777',title:'asdasd',answer:25},
-    {id:2,memberId:690,questionNumber:1,question:'1 питання для 690',title:'asdasd',answer:25},
-    {id:3,memberId:111,questionNumber:1,question:'1 питання для 111',title:'asdasd',answer:25},
-    {id:4,memberId:303,questionNumber:1,question:'1 питання для 303',title:'asdasd',answer:25},
-    {id:5,memberId:906,questionNumber:1,question:'1 питання для 906',title:'asdasd',answer:25},
-    {id:6,memberId:228,questionNumber:1,question:'1 питання для 228',title:'asdasd',answer:25},
-    {id:7,memberId:777,questionNumber:2,question:'2 питання для 777',title:'asdasd',answer:25},
-    {id:8,memberId:690,questionNumber:2,question:'2 питання для 690',title:'asdasd',answer:25},
-    {id:9,memberId:111,questionNumber:2,question:'2 питання для 111',title:'asdasd',answer:25},
-    {id:10,memberId:303,questionNumber:2,question:'2 питання для 303',title:'asdasd',answer:25},
-    {id:11,memberId:906,questionNumber:2,question:'2 питання для 906',title:'asdasd',answer:25},
-    {id:12,memberId:228,questionNumber:2,question:'2 питання для 228',title:'asdasd',answer:25},
+    {id:1,memberId:777,questionNumber:1,question:'Знайди свого напарника.Перевір чи немає когось за вхідними дверима!',
+      title:'Аби продовжити введи номер цього солоденького',answer:690},
+    {id:2,memberId:690,questionNumber:1,question:'Знайди свого напарника.Перевір чи немає когось за вхідними дверима!',
+      title:'Тільки не кажи одному з агентів,що ви в одній команді)',answer:777},
+
+    {id:3,memberId:111,questionNumber:1,question:'Знайди свого напарника\n' +
+        'Твій напарник чекатиме тебе в туалеті',title:'Чинннааааааа) треба номер напарника:',answer:303},
+    {id:4,memberId:303,questionNumber:1,question:'Знайди свого напарника\n' +
+        'Твій напарник чекатиме тебе в туалеті',title:'Сподіваюсь він білий... введи його номер:',answer:111},
+
+    {id:5,memberId:906,questionNumber:1,question:'Знайди свого напарника\n' +
+        'Здається, щось підгоріло в духовці',title:'Контролюй ,аби він не перебрав,будь-ласка.Потрібен його номер ',answer:228},
+    {id:6,memberId:228,questionNumber:1,question:'Знайди свого напарника\n' +
+        'Здається, щось підгоріло в духовці',title:'Давно ми не пили за началь... ой тфу.Номер напарника:',answer:906},
+    {id:7,memberId:777,questionNumber:2,question:'Інформація - найцінніша монета, на жаль, небезпечна.\n' +
+        'Доводиться використовувати шифрування щоб ворожі спец. служби не перехопили потрібний Вам код.\n' +
+        'Прямуйте в кімнату між входом та ванною.  В пустому куті лежить все необхідне для роботи.\n' +
+        '\n' +
+        'Підказка: 2 перші літери однакові',title:'Тобі знадобиться азбука',answer:1125415325},
+    {id:8,memberId:690,questionNumber:2,question:'Інформація - найцінніша монета, на жаль, небезпечна.\n' +
+        'Доводиться використовувати шифрування щоб ворожі спец. служби не перехопили потрібний Вам код.\n' +
+        'Прямуйте в кімнату між входом та ванною.  В пустому куті лежить все необхідне для роботи.\n' +
+        '\n' +
+        'Підказка: 2 перші літери однакові',title:'Тобі знадобиться азбука',answer:1125415325},
+
+    {id:9,memberId:111,questionNumber:2,question:'Роботи… ЦРУ створювало їх, щоб було легше контролювати людей. Але хитрі жінки почали  використовувати їх в корисливих цілях.\n' +
+        'Ваша задача знайти робота, який виглядає як пральна машина, але не пускає воду, а навпаки. Щось він приховує!',title:'Тобі знадобиться азбука',answer:72612},
+    {id:10,memberId:303,questionNumber:2,question:'Роботи… ЦРУ створювало їх, щоб було легше контролювати людей. Але хитрі жінки почали  використовувати їх в корисливих цілях.\n' +
+        'Ваша задача знайти робота, який виглядає як пральна машина, але не пускає воду, а навпаки. Щось він приховує!',title:'Тобі знадобиться азбука',answer:72612},
+
+    {id:11,memberId:906,questionNumber:2,question:'Чи знали ви, що 16% художників - наші агенти?\n' +
+        'Вони залишили підказку на своїх творіннях у кімнаті з найбільшим дзеркалом.',title:'Тобі знадобиться азбука',answer:5212142},
+    {id:12,memberId:228,questionNumber:2,
+      question:'Чи знали ви, що 16% художників - наші агенти?\n' +
+        'Вони залишили підказку на своїх творіннях у кімнаті з найбільшим дзеркалом.',title:'',answer:5212142},
+
+    {id:13,memberId:777,questionNumber:3,question:'Зараз ви будете знайомитись з головою німецької розвідки.\n' +
+        'Вона руда та гарна.\n' +
+        'Будьте найкращими друзями для неї і вона дасть Вам знайти код.',title:'Тобі знадобиться азбука',answer:802051},
+    {id:14,memberId:690,questionNumber:3,question:'Зараз ви будете знайомитись з головою німецької розвідки.\n' +
+        'Вона руда та гарна.\n' +
+        'Будьте найкращими друзями для неї і вона дасть Вам знайти код.',title:'Тобі знадобиться азбука',answer:802051},
+
+    {id:15,memberId:111,questionNumber:3,question:'Хто спалив мацкву?',title:'Тобі знадобиться азбука',answer:42127624},
+    {id:16,memberId:303,questionNumber:3,question:'Хто спалив мацкву?',title:'Тобі знадобиться азбука',answer:42127624},
+
+    {id:17,memberId:906,questionNumber:3,question:'Прямуйте до головних агентів.\n' +
+        'У них всі інструкції. Код надають також вони.',title:'Тобі знадобиться азбука',answer:33447},
+    {id:18,memberId:228,questionNumber:3,
+      question:'Прямуйте до головних агентів.\n' +
+        'У них всі інструкції. Код надають також вони.',title:'',answer:33447},
+    {id:19,memberId:777,questionNumber:4,question:'Прямуйте до головних агентів.\n' +
+        'У них всі інструкції. Код надають також вони.',title:'Тобі знадобиться азбука',answer:33447},
+    {id:20,memberId:690,questionNumber:4,question:'Прямуйте до головних агентів.\n' +
+        'У них всі інструкції. Код надають також вони.',title:'Тобі знадобиться азбука',answer:33447},
+    {id:21,memberId:111,questionNumber:4,question:'Інформація - найцінніша монета, на жаль, небезпечна.\n' +
+        'Доводиться використовувати шифрування щоб ворожі спец. служби не перехопили потрібний Вам код.\n' +
+        'Прямуйте в кімнату між входом та ванною.  В пустому куті лежить все необхідне для роботи.\n' +
+        '\n' +
+        'Підказка: 2 перші літери однакові',title:'Тобі знадобиться азбука',answer:1125415325},
+    {id:22,memberId:303,questionNumber:4,question:'Інформація - найцінніша монета, на жаль, небезпечна.\n' +
+        'Доводиться використовувати шифрування щоб ворожі спец. служби не перехопили потрібний Вам код.\n' +
+        'Прямуйте в кімнату між входом та ванною.  В пустому куті лежить все необхідне для роботи.\n' +
+        '\n' +
+        'Підказка: 2 перші літери однакові',title:'Тобі знадобиться азбука',answer:1125415325},
+    {id:23,memberId:906,questionNumber:4,question:'Роботи… ЦРУ створювало їх, щоб було легше контролювати людей. Але хитрі жінки почали  використовувати їх в корисливих цілях.\n' +
+        'Знайдіть робота, який дасть фору Єноту полоскуну. У нього є те, що Вам потрібно!',title:'Тобі знадобиться азбука',answer:72612},
+    {id:24,memberId:228,questionNumber:4,
+      question:'Роботи… ЦРУ створювало їх, щоб було легше контролювати людей. Але хитрі жінки почали  використовувати їх в корисливих цілях.\n' +
+        'Знайдіть робота, який дасть фору Єноту полоскуну. У нього є те, що Вам потрібно!',title:'Тобі знадобиться азбука',answer:72612},
 
   ]
 
@@ -36,7 +94,7 @@ export class QuestionsService {
   getAgentNumbers(): Array<Agent> {
     return this.agentsNumbers
   }
-  getQuestions(questionNumber:number,memberId:number):Array<Questions>{
-    return this.agentsQuestions.filter(x=>x.memberId==memberId && x.questionNumber==questionNumber)
+  getQuestions(questionNumber:number,memberId:number):Questions{
+    return this.agentsQuestions.find(x=>x.memberId==memberId && x.questionNumber==questionNumber)
   }
 }

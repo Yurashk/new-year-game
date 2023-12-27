@@ -11,7 +11,6 @@ import {Router} from "@angular/router";
 export class RegistrationComponent implements OnInit {
 
   correct:boolean=false;
-  currentCode:string='';
   myForm: FormGroup;
   constructor(private formBuilder: FormBuilder, private questionsService:QuestionsService,private router:Router) {
     this.myForm = this.formBuilder.group({
@@ -22,13 +21,20 @@ export class RegistrationComponent implements OnInit {
   }
   ngOnInit(): void {
   }
-  checkCorrect(value){
+  checkCorrect(event){
+    let next = event.target.nextElementSibling;
+    if (next && event.target.value) {
+      next.focus();
+    } else {
+      event.target.blur();
+    }
     this.correct=false;
   }
   submitForm(){
     let currentAgent:number=this.myForm.value.agentNumber*100+this.myForm.value.agentNumber2*10+this.myForm.value.agentNumber3;
     let a:any=this.questionsService.getAgentNumbers();
     if(a.find(x=>x.id==currentAgent)){
+
       localStorage.setItem('currentAgent', String(currentAgent));
       this.router.navigate(['rules']);
     }
