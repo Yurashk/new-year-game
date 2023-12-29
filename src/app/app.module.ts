@@ -10,6 +10,11 @@ import { FirstTaskComponent } from './components/first-task/first-task.component
 import { SecondTaskComponent } from './components/second-task/second-task.component';
 import { ThrdQuestionComponent } from './components/thrd-question/thrd-question.component';
 import { FoursQuestionComponent } from './components/fours-question/fours-question.component';
+import { FifthQuestionComponent } from './components/fifth-question/fifth-question.component';
+import { SixsQuestionComponent } from './components/sixs-question/sixs-question.component';
+import { SevensQuestionComponent } from './components/sevens-question/sevens-question.component';
+import { EightsQuestionComponent } from './components/eights-question/eights-question.component';
+import { FinalQuestionComponent } from './components/final-question/final-question.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +24,12 @@ import { FoursQuestionComponent } from './components/fours-question/fours-questi
     FirstTaskComponent,
     SecondTaskComponent,
     ThrdQuestionComponent,
-    FoursQuestionComponent
+    FoursQuestionComponent,
+    FifthQuestionComponent,
+    SixsQuestionComponent,
+    SevensQuestionComponent,
+    EightsQuestionComponent,
+    FinalQuestionComponent
   ],
     imports: [
         BrowserModule,

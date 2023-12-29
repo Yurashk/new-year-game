@@ -13,6 +13,7 @@ export class FirstTaskComponent implements OnInit {
   currentAgent:number=null;
   currentQuestions:Questions;
   correct:boolean=false;
+  correctAnswer:boolean=false;
   myForm: FormGroup;
   constructor(private formBuilder: FormBuilder, private questionsService:QuestionsService,private router:Router) {
     this.myForm = this.formBuilder.group({
@@ -38,8 +39,12 @@ export class FirstTaskComponent implements OnInit {
   submitForm(){
     let currentAgent:number=this.myForm.value.agentNumber*100+this.myForm.value.agentNumber2*10+this.myForm.value.agentNumber3;
     if(this.currentQuestions.answer===currentAgent){
-      localStorage.setItem('currentAgent', String(currentAgent));
-      this.router.navigate(['second-task']);
+      this.correctAnswer=true;
+      setTimeout(() => {
+          this.router.navigate(['second-task']);
+        }
+        , 1500);
+
     }
     else this.correct=true
 

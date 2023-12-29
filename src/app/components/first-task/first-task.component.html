@@ -11,5 +11,5 @@
     <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary">Підтвердити</button>
     <span *ngIf="myForm.valid && correct" class="mt-3 text-danger text-center">Такого агента не існує!</span>
   </form>
-
+  <img *ngIf="correctAnswer" src="assets/images/true.png">
 </div>

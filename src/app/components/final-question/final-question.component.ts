@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import {Agent} from "../../models/agent";
+import {Questions} from "../../models/questions";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {QuestionsService} from "../../services/questions.service";
 import {Router} from "@angular/router";
-import {Questions} from "../../models/questions";
-import {Agent} from "../../models/agent";
 
 @Component({
-  selector: 'app-second-task',
-  templateUrl: './second-task.component.html',
-  styleUrls: ['./second-task.component.css']
+  selector: 'app-final-question',
+  templateUrl: './final-question.component.html',
+  styleUrls: ['./final-question.component.css']
 })
-export class SecondTaskComponent implements OnInit {
+export class FinalQuestionComponent implements OnInit {
+
   currentAgent:Agent;
   correct:boolean=false;
   currentQuestions:Questions;
@@ -25,16 +26,18 @@ export class SecondTaskComponent implements OnInit {
   ngOnInit() {
     let a:any=this.questionsService.getAgentNumbers();
     this.currentAgent=a.find(x=>x.id==Number(localStorage.getItem('currentAgent')))
-    this.currentQuestions=this.questionsService.getQuestions(2,this.currentAgent.id);
+    this.currentQuestions=this.questionsService.getQuestions(9,this.currentAgent.id);
   }
   submitForm(){
     if(this.currentQuestions.answer===this.myForm.value.agentAnswer){
       this.correctAnswer=true
       setTimeout(() => {
-          this.router.navigate(['third-task'])
+          this.router.navigate(['eights-task'])
         }
         , 1500);
     }
     else this.correct=true
   }
+
+
 }

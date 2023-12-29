@@ -1,0 +1,9 @@
+<div class="task-container text-center">
+  <div class="task-container text-center">
+    <div class="question-div" [ngClass]="currentAgent.memberSide==1 ? 'for-first':'for-second'">{{currentQuestions.question}}</div>
+    <span class="small text-danger">{{currentQuestions.title}}</span>
+
+
+  </div>
+  <img *ngIf="correctAnswer" src="assets/images/true.png">
+</div>
