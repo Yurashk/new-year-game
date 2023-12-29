@@ -62,6 +62,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/final-question/final-question.component.html":
+/*!***************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/final-question/final-question.component.html ***!
+  \***************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"task-container text-center\">\n  <div class=\"task-container text-center\">\n    <div class=\"question-div\" [ngClass]=\"currentAgent.memberSide==1 ? 'for-first':'for-second'\">{{currentQuestions.question}}</div>\n    <span class=\"small text-danger\">{{currentQuestions.title}}</span>\n\n\n  </div>\n  <img *ngIf=\"correctAnswer\" src=\"assets/images/true.png\">\n</div>\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/first-task/first-task.component.html":
 /*!*******************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/first-task/first-task.component.html ***!
@@ -443,6 +456,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_sixs_question_sixs_question_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/sixs-question/sixs-question.component */ "./src/app/components/sixs-question/sixs-question.component.ts");
 /* harmony import */ var _components_sevens_question_sevens_question_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/sevens-question/sevens-question.component */ "./src/app/components/sevens-question/sevens-question.component.ts");
 /* harmony import */ var _components_eights_question_eights_question_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/eights-question/eights-question.component */ "./src/app/components/eights-question/eights-question.component.ts");
+/* harmony import */ var _components_final_question_final_question_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/final-question/final-question.component */ "./src/app/components/final-question/final-question.component.ts");
+
 
 
 
@@ -468,6 +483,7 @@ const routes = [
     { path: 'sixes-task', component: _components_sixs_question_sixs_question_component__WEBPACK_IMPORTED_MODULE_10__["SixsQuestionComponent"] },
     { path: 'sevens-task', component: _components_sevens_question_sevens_question_component__WEBPACK_IMPORTED_MODULE_11__["SevensQuestionComponent"] },
     { path: 'eights-task', component: _components_eights_question_eights_question_component__WEBPACK_IMPORTED_MODULE_12__["EightsQuestionComponent"] },
+    { path: 'final-task', component: _components_final_question_final_question_component__WEBPACK_IMPORTED_MODULE_13__["FinalQuestionComponent"] },
     { path: '**', component: _components_registration_registration_component__WEBPACK_IMPORTED_MODULE_3__["RegistrationComponent"] }
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -553,6 +569,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_sixs_question_sixs_question_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/sixs-question/sixs-question.component */ "./src/app/components/sixs-question/sixs-question.component.ts");
 /* harmony import */ var _components_sevens_question_sevens_question_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/sevens-question/sevens-question.component */ "./src/app/components/sevens-question/sevens-question.component.ts");
 /* harmony import */ var _components_eights_question_eights_question_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/eights-question/eights-question.component */ "./src/app/components/eights-question/eights-question.component.ts");
+/* harmony import */ var _components_final_question_final_question_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/final-question/final-question.component */ "./src/app/components/final-question/final-question.component.ts");
+
 
 
 
@@ -584,7 +602,8 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _components_fifth_question_fifth_question_component__WEBPACK_IMPORTED_MODULE_12__["FifthQuestionComponent"],
             _components_sixs_question_sixs_question_component__WEBPACK_IMPORTED_MODULE_13__["SixsQuestionComponent"],
             _components_sevens_question_sevens_question_component__WEBPACK_IMPORTED_MODULE_14__["SevensQuestionComponent"],
-            _components_eights_question_eights_question_component__WEBPACK_IMPORTED_MODULE_15__["EightsQuestionComponent"]
+            _components_eights_question_eights_question_component__WEBPACK_IMPORTED_MODULE_15__["EightsQuestionComponent"],
+            _components_final_question_final_question_component__WEBPACK_IMPORTED_MODULE_16__["FinalQuestionComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -654,7 +673,7 @@ let EightsQuestionComponent = class EightsQuestionComponent {
         if (this.currentQuestions.answer === this.myForm.value.agentAnswer) {
             this.correctAnswer = true;
             setTimeout(() => {
-                this.router.navigate(['eights-task']);
+                this.router.navigate(['final-task']);
             }, 1500);
         }
         else
@@ -746,6 +765,83 @@ FifthQuestionComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./fifth-question.component.css */ "./src/app/components/fifth-question/fifth-question.component.css")).default]
     })
 ], FifthQuestionComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/final-question/final-question.component.css":
+/*!************************************************************************!*\
+  !*** ./src/app/components/final-question/final-question.component.css ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".task-container{\r\n  width: 100%;\r\n  height: 100%;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n}\r\n.question-div{\r\n  position: absolute;\r\n  width: 300px;\r\n  padding: 5px;\r\n  bottom:20px;\r\n  border:1px solid silver;\r\n  border-radius: 15px;\r\n  background-color: lightcoral;\r\n  opacity: .8;\r\n}\r\n.for-first{\r\n  right:-150px\r\n}\r\n.for-second{\r\n  left:-150px\r\n}\r\nimg{\r\n  width: 50px;\r\n  height: 50px;\r\n  position: absolute;\r\n  right: 15px;\r\n  top:15px\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9maW5hbC1xdWVzdGlvbi9maW5hbC1xdWVzdGlvbi5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsV0FBVztFQUNYLFlBQVk7RUFDWixhQUFhO0VBQ2Isc0JBQXNCO0VBQ3RCLHVCQUF1QjtBQUN6QjtBQUNBO0VBQ0Usa0JBQWtCO0VBQ2xCLFlBQVk7RUFDWixZQUFZO0VBQ1osV0FBVztFQUNYLHVCQUF1QjtFQUN2QixtQkFBbUI7RUFDbkIsNEJBQTRCO0VBQzVCLFdBQVc7QUFDYjtBQUNBO0VBQ0U7QUFDRjtBQUNBO0VBQ0U7QUFDRjtBQUNBO0VBQ0UsV0FBVztFQUNYLFlBQVk7RUFDWixrQkFBa0I7RUFDbEIsV0FBVztFQUNYO0FBQ0YiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2ZpbmFsLXF1ZXN0aW9uL2ZpbmFsLXF1ZXN0aW9uLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudGFzay1jb250YWluZXJ7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxufVxyXG4ucXVlc3Rpb24tZGl2e1xyXG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICB3aWR0aDogMzAwcHg7XHJcbiAgcGFkZGluZzogNXB4O1xyXG4gIGJvdHRvbToyMHB4O1xyXG4gIGJvcmRlcjoxcHggc29saWQgc2lsdmVyO1xyXG4gIGJvcmRlci1yYWRpdXM6IDE1cHg7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogbGlnaHRjb3JhbDtcclxuICBvcGFjaXR5OiAuODtcclxufVxyXG4uZm9yLWZpcnN0e1xyXG4gIHJpZ2h0Oi0xNTBweFxyXG59XHJcbi5mb3Itc2Vjb25ke1xyXG4gIGxlZnQ6LTE1MHB4XHJcbn1cclxuaW1ne1xyXG4gIHdpZHRoOiA1MHB4O1xyXG4gIGhlaWdodDogNTBweDtcclxuICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgcmlnaHQ6IDE1cHg7XHJcbiAgdG9wOjE1cHhcclxufVxyXG4iXX0= */");
+
+/***/ }),
+
+/***/ "./src/app/components/final-question/final-question.component.ts":
+/*!***********************************************************************!*\
+  !*** ./src/app/components/final-question/final-question.component.ts ***!
+  \***********************************************************************/
+/*! exports provided: FinalQuestionComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FinalQuestionComponent", function() { return FinalQuestionComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _services_questions_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/questions.service */ "./src/app/services/questions.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
+
+
+
+
+let FinalQuestionComponent = class FinalQuestionComponent {
+    constructor(formBuilder, questionsService, router) {
+        this.formBuilder = formBuilder;
+        this.questionsService = questionsService;
+        this.router = router;
+        this.correct = false;
+        this.correctAnswer = false;
+        this.myForm = this.formBuilder.group({
+            agentAnswer: [null, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+        });
+    }
+    ngOnInit() {
+        let a = this.questionsService.getAgentNumbers();
+        this.currentAgent = a.find(x => x.id == Number(localStorage.getItem('currentAgent')));
+        this.currentQuestions = this.questionsService.getQuestions(9, this.currentAgent.id);
+    }
+    submitForm() {
+        if (this.currentQuestions.answer === this.myForm.value.agentAnswer) {
+            this.correctAnswer = true;
+            setTimeout(() => {
+                this.router.navigate(['eights-task']);
+            }, 1500);
+        }
+        else
+            this.correct = true;
+    }
+};
+FinalQuestionComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
+    { type: _services_questions_service__WEBPACK_IMPORTED_MODULE_3__["QuestionsService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }
+];
+FinalQuestionComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-final-question',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./final-question.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/final-question/final-question.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./final-question.component.css */ "./src/app/components/final-question/final-question.component.css")).default]
+    })
+], FinalQuestionComponent);
 
 
 

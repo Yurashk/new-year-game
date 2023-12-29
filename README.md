@@ -1,3 +1,5 @@
+Just a quest for relax with your friends -enjoy :)
+
 # NewYearProj
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.29.
